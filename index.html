@@ -1,0 +1,76 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene >
+      <a-assets>
+        <img id="metal" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/reflection/metal.jpg">
+        <img id="sky" src="https://image.shutterstock.com/image-photo/360-seamless-sunset-sky-panorama-260nw-1085025185.jpg">
+        <audio id="chimes1" src="https://cdn.glitch.com/de5828e3-6db2-475d-8dde-38c5b70287b9%2FChimes1.mp3?v=1570821095683" type="audio/mp3"></audio>
+        <audio id="chimes2" src="https://cdn.glitch.com/de5828e3-6db2-475d-8dde-38c5b70287b9%2FChimes2.mp3?v=1570821095715" type="audio/mp3"></audio>
+        <audio id="chimes3" src="https://cdn.glitch.com/de5828e3-6db2-475d-8dde-38c5b70287b9%2FChimes3.mp3?v=1570821095747" type="audio/mp3"></audio>
+        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+      </a-assets>
+      <a-entity animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 4000; loop: true"
+                animation__user="property: object3D.position.z; to: -8; dir: alternate; dur: 500; loop: 1; easing: easeInQuad; startEvents: click"
+                sound="src: #chimes1; on: click">
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="2 -1 -7" scale="0.75 2 0.75" rotation="20 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="2 -1 -8" scale="0.75 2 0.75" rotation="20 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="2.5 1.6 -7.5" scale="0.7 1.3 0.7" rotation="-15 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="4.2 .75 -7.5" scale="0.75 2 0.75" rotation="90 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="6.5 -1 -7" scale="0.75 2 0.7" rotation="-20 90 170"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="6.5 -1 -8" scale="0.75 2 0.7" rotation="-20 90 190"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="6.5 1.6 -7.5" scale="0.6 1.3 0.6" rotation="15 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="6.9 2.8 -7.5" scale="0.2 0.9 0.2" rotation="15 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="1 3 -7.5" scale="0.8 1.5 0.8" rotation="100 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="2.3 4 -7" scale="0.7 1.3 0.7" rotation="9 90 180"></a-sphere>
+        <a-sphere src="#metal" color="hotpink" metalness="0.5" position="2.3 4 -8" scale="0.7 1.3 0.7" rotation="9 90 180"></a-sphere>
+        <a-cone src="#metal" color="hotpink" metalness="0.5" position="-0.6 3.2 -7.5" radius-bottom ="0.3" radius-top="0.03" scale="0.5 0.5 0.5" rotation="100 90 0" color="hotpink"></a-cone>
+      </a-entity>
+      <a-entity animation="property: object3D.position.y; to: 2.8; dir: alternate; dur: 6000; loop: true; easing: easeInExpo"
+                animation__user="property: object3D.position.z; to: -4; dir: alternate; dur: 500; loop: 1; easing: easeInQuad; startEvents: click"
+                sound="src: #chimes2; on: click">
+        <a-torus src="#metal" color="#a335c4" metalness="0.5" position="-5 0 -3" rotation="90 90 0"></a-torus>
+        <a-torus src="#metal" color="#a335c4" metalness="0.5" position="-6.5 0 -2.8" rotation="90 90 0"></a-torus>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-5.25 1 -3" scale="0.7 1.4 0.7" rotation="0 0 10"></a-sphere>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-6.25 1 -2.8" scale="0.7 1.4 0.7" rotation="0 0 -10"></a-sphere>
+        <a-torus src="#metal" color="#a335c4" metalness="0.5" position="-5 0 -4.2" rotation="90 90 0"></a-torus>
+        <a-torus src="#metal" color="#a335c4" metalness="0.5" position="-6.5 0 -4" rotation="90 90 0"></a-torus>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-5.25 1.2 -4.2" scale="0.6 1.75 0.6" rotation="30 0 0"></a-sphere>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-6.25 1.2 -4" scale="0.6 1.75 0.6" rotation="30 0 0"></a-sphere>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-5.75 2.8 -3" scale="0.6 0.7 0.6" rotation="20 0 0"></a-sphere>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-5.75 3.8 -2.5" scale="0.6 0.7 0.6" rotation="80 0 0"></a-sphere>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-5.6 5 -3.8" scale="0.6 1.75 0.6" rotation="-30 0 0"></a-sphere>
+        <a-sphere src="#metal" color="#a335c4" metalness="0.5" position="-6.1 5 -3.8" scale="0.6 1.75 0.6" rotation="-30 0 0"></a-sphere>
+        <a-cone src="#metal" color="#a335c4" metalness="0.5" position="-5.7 4 -1.8" radius-bottom ="0.18" radius-top="0.02" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-cone>
+      </a-entity>
+      <a-entity animation="property: object3D.position.y; to: -1.7; dir: alternate; dur: 5000; loop: true"
+                animation__user="property: object3D.position.z; to: -13; dir: alternate; dur: 500; loop: 1; easing: easeInQuad; startEvents: click"
+                sound="src: #chimes3; on: click">
+        <a-torus-knot src="#metal" color="#5ccdfa" metalness="0.5" position="-3 3 -12" radius="1" radius-tubular="0.25" rotation="90 0 0"></a-torus-knot>
+        <a-sphere src="#metal" color="#5ccdfa" metalness="0.5" position="-2.2 4.5 -12" scale="0.5 2 0.5" rotation="0 0 10"></a-sphere>
+        <a-sphere src="#metal" color="#5ccdfa" metalness="0.5" position="-2 6.5 -12" scale="0.4 1 0.4" rotation="0 0 -50"></a-sphere>
+        <a-sphere src="#metal" color="#5ccdfa" metalness="0.5" position="-1.1 7.25 -12" scale="0.1 0.4 0.1" rotation="0 0 -50"></a-sphere>
+      </a-entity>
+      <a-entity position="-3 1 -6" rotation="5 0 0">
+        <a-entity animation="property: material.opacity; type: opacity; from: 0.3; to: 0.9; dir: alternate; dur: 2000; loop: true; easing: easeOutQuad"
+          rotation="0 0 5"
+          position="-1 5.5 0.2"
+          text-geometry="value: Poke me!; font: #dawningFont; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1.2; height: 0;"
+          material="color: #fef0ff">
+        </a-entity>
+      </a-entity>
+      <a-entity light="color: #fbc2ff; intensity: 1.5" position="-1 10 20"></a-entity>
+      <a-entity light="color: #5622bd; intensity: 1" position="-1 5.5 0.2"></a-entity>
+      <a-sky src="#sky"></a-sky>
+      <a-camera position="0 1.6 3">
+        <a-cursor color="#fef0ff"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
